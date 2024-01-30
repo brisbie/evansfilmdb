@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+    <html lang="eng">
+ <head>
+    <meta charset="utf-8">
+    <title>Evan's Film Database</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Fjalla+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        #main-content{
+            width: 46%;
+            float: left;
+            padding: 2%;
+        }
+
+        #sidebar{
+            width: 44%;
+            float: left;
+            padding: 2%;
+        }
+
+        #wrapper{
+            width: 80%;
+            margin: 0% auto;
+        }
+
+        body{
+            background-color: #C2C5AA;
+        }
+
+        p{
+            margin: 3% 0;
+            color: #333D29;
+            font-family: "Abel", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+        }
+        h1{
+            margin: 2% 0;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 44px;
+            background-color: #656D4A;
+            padding: 2%;
+        }
+
+        h2{
+            margin: 2% 0;
+            font-family: "Fjalla One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 26px;
+        }
+
+        footer{
+            clear: left;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-left: 2%;
+        }
+
+        .navbar ul
+        {
+            list-style-type: none;
+            background-color: #A68A64;
+            padding: 1%;
+            margin: 0%;
+            overflow:hidden
+        }
+
+        .navbar a{
+            color: black;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            text-align: center;
+        }
+
+        .navbar a:hover{
+            background-color: #936639;
+        }
+
+        .navbar li {
+            float: left;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+        }
+        .poster1{
+            width: 56%;
+            float: left;
+            padding: 2%;
+        }
+        .desc1{
+            width: 36%;
+            float: left;
+            padding: 2%;
+        }
+
+        .poster2{
+            width: 56%;
+            float: left;
+            padding: 2%;
+        }
+
+        .desc2{
+            width: 36%;
+            float: left;
+            padding: 2%;
+        }
+        figure img{
+            width: 80%;
+            margin: 0;
+            border: 5px solid #414833;
+        }
+        .poster3{
+            width: 56%;
+            float: left;
+            padding: 2%;
+        }
+
+        .desc3{
+            width: 36%;
+            float: left;
+            padding: 2%;
+        }
+        .tvposter1{
+            width: 56%;
+            float: left;
+            padding: 2%;
+        }
+
+        .tvdesc1{
+            width: 36%;
+            float: left;
+            padding: 2%;
+        }
+        .tvposter2{
+            width: 56%;
+            float: left;
+            padding: 2%;
+        }
+
+        .tvdesc2{
+            width: 36%;
+            float: left;
+            padding: 2%;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #A68A64;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        th {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #582F0E;
+            background-color: #936639;
+            font-family: "Fjalla One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        td{
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #582F0E;
+            color: black;
+            font-family: "Abel", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Science Fiction</h1>
+        </header>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Action.html">Action</a></li>
+                <li><a href="Drama.html">Drama</a></li>
+                <li><a href="Fantasy.html">Fantasy</a></li>
+              
+            </ul>
+        </nav>
+
+        <div id="main-content">
+                <div class="poster1">
+                    <figure>
+                    <img src="https://imgc.allpostersimages.com/img/posters/interstellar_u-L-F7SGU70.jpg?artPerspective=n"/>
+                    </figure>
+                </div>
+
+                <div class="desc1">
+                    <h2>Interstellar</h2>
+                    <p>
+                        "Interstellar" is a science fiction film directed by Christopher Nolan, released in 2014. The movie explores themes of space exploration, time dilation, and the survival of humanity.
+                        Set in a near-future Earth facing environmental collapse and widespread crop failures, "Interstellar" follows Joseph Cooper (Matthew McConaughey), a former NASA pilot turned farmer. 
+                        Through a series of mysterious gravitational anomalies, Cooper and his daughter Murphy (Jessica Chastain, Ellen Burstyn) discover the remnants of NASA, now operating in secret.
+                    </p>
+    
+                </div> 
+           
+                <div class="poster2">
+                    <figure>
+                    <img src="https://i.etsystatic.com/23402008/r/il/05d9e5/3286666323/il_fullxfull.3286666323_kuth.jpg"/>
+                    </figure>
+                </div>
+
+                <div class="desc2">
+                    <h2>Blade Runner 2049</h2>
+                    <p>
+                        "Blade Runner 2049" is a science fiction film directed by Denis Villeneuve, released in 2017. It serves as a sequel to the 1982 cult classic "Blade Runner," directed by Ridley Scott.
+                        The film is set in a dystopian future, thirty years after the events of the original "Blade Runner." The story follows K (Ryan Gosling), a replicant (bioengineered human) and a "Blade Runner" 
+                        working for the LAPD. K's mission is to locate and "retire" older model replicants living in hiding.
+                    </p>
+                </div>
+
+                <div class="poster3">
+                    <figure>
+                        <img src="https://m.media-amazon.com/images/I/61jCCwfO6HL._AC_UF894,1000_QL80_.jpg"/>
+                    </figure>
+                </div>
+
+                <div class="desc3">
+                    <h2>Star Wars: Revenge of the Sith</h2>
+                    <p>
+                        "Star Wars: Episode III - Revenge of the Sith" is a science fiction film and the third installment in the prequel trilogy of the "Star Wars" saga. It was released in 2005 and directed by George Lucas.
+                         The film serves as a bridge between the prequel and original trilogies, depicting the events that lead to the rise of the Galactic Empire and the fall of the Jedi Order.  The film is set during the 
+                         final days of the Clone Wars, a conflict between the Galactic Republic and the Separatist Alliance. The Republic's Clone Army, led by the Jedi, is battling the droid armies of the Separatists
+                    </p>
+                </div>
+        </div><!--Closing main div-->
+        <div id="sidebar">
+            <div class="tvposter1">
+                <figure>
+                    <img src="https://i.ebayimg.com/images/g/hywAAOSwkIJfZXFg/s-l1600.jpg"/>
+                </figure>
+            </div>
+
+            <div class="tvdesc1">
+                <h2>The 100</h2>
+                <p>
+                    "The 100" is a post-apocalyptic science fiction television series that premiered in 2014. The show is based on a book series of the same name by Kass Morgan. The series explores the challenges
+                     and conflicts faced by a group of survivors as they navigate a world that has been devastated by nuclear apocalypse.  The story is set 97 years after a nuclear apocalypse wipes out almost all 
+                     life on Earth. The remnants of humanity survive aboard a massive space station called the Ark. With resources running out and the Ark deteriorating, the governing body decides to send 100 juvenile 
+                     delinquents back to Earth to see if the planet is habitable again.
+                </p>
+            </div>
+
+            <div class="tvposter2">
+                <figure>
+                    <img src="https://lumiere-a.akamaihd.net/v1/images/fbtw_b733dbb2.jpeg?width=1136"/>
+                </figure>
+            </div>
+
+            <div class="tvdesc2">
+                <h2>Star Wars: Obi Wan Kenobi</h2>
+                <p>
+                    The "Obi-Wan Kenobi" series is a live-action television series set in the Star Wars universe. It is developed by Lucasfilm and intended for Disney+. The series is a continuation of the Star Wars saga
+                    and features Ewan McGregor reprising his role as Obi-Wan Kenobi.  The series is expected to take place between the events of "Star Wars: Episode III - Revenge of the Sith" and "Star Wars: Episode IV 
+                    - A New Hope." This is a significant period in the Star Wars timeline when Obi-Wan Kenobi is in hiding on the desert planet Tatooine, keeping a watchful eye on the young Luke Skywalker.
+                </p>
+            </div>
+
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Release Year</th>
+                    <th>Director</th>
+                    <th>Main Cast</th>
+                    <th>IMDb Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Interstellar</td>
+                    <td>2014</td>
+                    <td>Christopher Nolan</td>
+                    <td>Matthew McConaughey, Anne Hathaway</td>
+                    <td>8.7</td>
+                </tr>
+                <tr>
+                    <td>Blade Runner 2049</td>
+                    <td>2017</td>
+                    <td>Denis Villeneuve</td>
+                    <td>Ryan Gosling, Harrison Ford</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Revenge of the Sith</td>
+                    <td>2005</td>
+                    <td>George Lucas</td>
+                    <td>Hayden Christensen, Ewan McGregor</td>
+                    <td>7.6</td>
+                </tr>
+                <tr>
+                    <td>The 100</td>
+                    <td>2014</td>
+                    <td>Jason Rothenberg</td>
+                    <td>Eliza Taylor, Bob Morley</td>
+                    <td>7.6</td>
+                </tr>
+                <tr>
+                    <td>Obi Wan Kenobi</td>
+                    <td>2022</td>
+                    <td>Deborah Chow</td>
+                    <td>Ewan McGregor, Moses Ingram</td>
+                    <td>7.1</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <footer>
+            Made by Evan Brisbin
+        </footer>
+    </div>
+</body>
+
+
+
+
+
+</html>

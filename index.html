@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+    <html lang="eng">
+ <head>
+    <meta charset="utf-8">
+    <title>Evan's Film Database</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Fjalla+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+    <style type="text/css">
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        #main-content{
+            width: 56%;
+            float: left;
+            padding: 2%;
+        }
+
+        #sidebar{
+            width: 36%;
+            float: left;
+            padding: 2%;
+        }
+
+        #wrapper{
+            width: 80%;
+            margin: 0% auto;
+        }
+        body{
+            background-color: #C2C5AA;
+        
+        }
+        p{
+            margin: 3% 0;
+            color: #333D29;
+        }
+        h1{
+            margin: 2% 0;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 44px;
+            background-color: #656D4A;
+            padding: 2%;
+        }
+        h2{
+            margin: 2% 0;
+            font-family: "Fjalla One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 26px;
+        }
+        p{
+            font-family: "Abel", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+        }
+
+        footer{
+            clear: left;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-left: 2%;
+        }
+
+        .navbar ul
+        {
+            list-style-type: none;
+            background-color: #A68A64;
+            padding: 1%;
+            margin: 0%;
+            overflow:hidden
+        }
+
+        .navbar a{
+            color: black;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            text-align: center;
+        }
+
+        .navbar a:hover{
+            background-color: #936639;
+        }
+
+        .navbar li {
+            float: left;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+        }
+
+        #posters img{
+            width: 22.5%;
+            height: 280px;
+            border: 5px solid #414833;
+            
+        }
+        figure {
+            margin: 0;
+            padding: 0%;
+        }
+        figure p{
+            float: right;
+        }
+        figcaption{
+            font-family: "Fjalla One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+     
+        .spotlight img{
+            border: 15px solid #414833;
+            width: 96%;
+
+        }
+        blockquote{
+            margin: 2%;
+            padding: 2%;
+            font-size: 24px;
+            font-family: "Lobster Two", sans-serif;
+            font-weight: light;
+            font-style: normal;
+            line-height: 150%;
+            background-color: #A4AC86;
+            border-left: 8px solid #414833;
+        }
+        blockquote:before{
+            content: "\201c";
+            font-size: 40px;
+            vertical-align: .15em;
+        }
+        ul{
+            list-style-type: disc;
+            font-family: "Abel", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+            color: #333D29;
+            padding-left: 5%;
+
+        }
+
+        ol{
+            list-style-type: decimal;
+            font-family: "Abel", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+            color: #333D29;
+            padding-left: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Evan's Film Database</h1>
+        </header>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Action.html">Action</a></li>
+                <li><a href="Sci-Fi.html">Sci-Fi</a></li>
+                <li><a href="Drama.html">Drama</a></li>
+                <li><a href="Fantasy.html">Fantasy</a></li>
+              
+            </ul>
+        </nav>
+
+        <div id="main-content">
+            <article>
+                <h2>Upcoming Films</h2>
+                   <div id="posters">
+                        <img src="https://image.tmdb.org/t/p/original/jUvA71PxFvQgPpNrKrq0J12LwgC.jpg"/>
+                        <img src="https://lh6.googleusercontent.com/proxy/Q_SbHHcEfzfHVPRNqKl-Rl2UWsLSXvtsVnKPLavp7hZ65-SalDAtr3zC3_y7tPZyEzF6cfs1NDEbZ4zLkbDVtPNpQqHwsmM84663"/>
+                        <img src="https://i.ebayimg.com/images/g/resAAOSwFf1lD~Fw/s-l1600.jpg"/>
+                        <img src="https://m.media-amazon.com/images/M/MV5BZDkzNmY5MTYtMDllOS00YmQwLWI5ZjktMTU3M2FkYzcxODFlXkEyXkFqcGdeQXVyMTUzMDA1MjYz._V1_.jpg"/>
+                   </div>
+            </article>
+
+            <article>
+                <h2>Director Spotlight</h2>
+
+                        <figure class="spotlight">
+                            <img src="directorspotlight.jpg"/>
+                            <figcaption>Director Christopher Nolan</figcaption>  
+
+                            <blockquote>
+                                Now you're looking for the secret, but you won't find it...because you're not really looking. You don't really want to know. You want to be fooled.
+                            </blockquote>
+
+                            <p>
+                                Captured in a moment of triumph, the image showcases Christopher Nolan's heartfelt acceptance of the Golden Globe for his cinematic
+                                masterpiece 'Oppenheimer.' With an aura of gratitude and accomplishment, Nolan stands on the stage, the coveted trophy in hand,
+                                his eyes reflecting the culmination of dedication and artistic vision. The photograph immortalizes the director's contribution to
+                                the world of cinema, where 'Oppenheimer' is celebrated not only for its compelling narrative but also for the indelible mark it leaves
+                                on the landscape of storytelling
+                            </p>
+                        </figure>
+            </article>
+        </div><!--Closing main div-->
+        <div id="sidebar">
+            <article>
+                <h2>About Evan</h2>
+
+                <p>
+                    Hey there, fellow movie buffs! I'm Evan, the movie fanatic pulling the strings here at Evan's Film Database. 
+                    Basically, I'm just a movie lover trying to put my passion into words.
+                </p>
+
+                <p>
+                    You know that feeling when you find an epic movie or binge-worthy TV show, and you can't wait to tell someone about it?
+                     Well, that's what we're all about here. From the latest blockbusters to those hidden gems, I'm on a mission to share 
+                     my thoughts and recommendations with all of you.
+                </p>
+
+                <p>
+                    So, if you're into casual reviews, a sprinkle of humor, and discussions about the latest on-screen adventures,
+                     you're in the right spot. Let's navigate this cinematic journey together and geek out over the awesome world of movies and TV shows. 
+                     Grab a snack, hit play, and let's get into it!
+                </p>
+            </article>
+                <h2>TV Treasures: A Ranked List</h2>
+                    <ol>
+                        <li>Breaking Bad</li>
+                        <li>Game of Thrones</li>
+                        <li>Avatar: The Last Airbender</li>
+                        <li>Lost</li>
+                        <li>The Last of Us</li>
+                    </ol>
+            <article>
+            
+            <article>
+                <h2>Popcorn Pleasures: My Movie Favorites in No Particular Order</h2>
+                    <ul>
+                        <li>Interstellar</li>
+                        <li>Fight Club</li>
+                        <li>Oppenheimer</li>
+                        <li>Shutter Island</li>
+                        <li>Hacksaw Ridge</li>
+                        <li>The Truman Show</li>
+                        <li>Star Wars: The Empire Strikes Back</li>
+                        <li>The Lord of the Rings: The Return of the King</li>
+                    </ul>
+            </article>
+
+
+
+            </article>
+        </div>
+
+        <footer>
+            Made by Evan Brisbin
+        </footer>
+    </div>
+</body>
+
+
+
+
+
+</html>

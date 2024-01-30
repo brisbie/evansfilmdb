@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+    <html lang="eng">
+ <head>
+    <meta charset="utf-8">
+    <title>Evan's Film Database</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Fjalla+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        #main-content{
+            width: 46%;
+            float: left;
+            padding: 2%;
+        }
+
+        #sidebar{
+            width: 44%;
+            float: left;
+            padding: 2%;
+        }
+
+        #wrapper{
+            width: 80%;
+            margin: 0% auto;
+        }
+
+        body{
+            background-color: #C2C5AA;
+        }
+
+        p{
+            margin: 3% 0;
+            color: #333D29;
+            font-family: "Abel", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+        }
+        h1{
+            margin: 2% 0;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 44px;
+            background-color: #656D4A;
+            padding: 2%;
+        }
+
+        h2{
+            margin: 2% 0;
+            font-family: "Fjalla One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 26px;
+        }
+
+        footer{
+            clear: left;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-left: 2%;
+        }
+
+        .navbar ul
+        {
+            list-style-type: none;
+            background-color: #A68A64;
+            padding: 1%;
+            margin: 0%;
+            overflow:hidden
+        }
+
+        .navbar a{
+            color: black;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            text-align: center;
+        }
+
+        .navbar a:hover{
+            background-color: #936639;
+        }
+
+        .navbar li {
+            float: left;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+        }
+        .poster1{
+            width: 56%;
+            float: left;
+            padding: 2%;
+        }
+        .desc1{
+            width: 36%;
+            float: left;
+            padding: 2%;
+        }
+
+        .poster2{
+            width: 56%;
+            float: left;
+            padding: 2%;
+        }
+
+        .desc2{
+            width: 36%;
+            float: left;
+            padding: 2%;
+        }
+        figure img{
+            width: 80%;
+            margin: 0;
+            border: 5px solid #414833;
+        }
+        .poster3{
+            width: 56%;
+            float: left;
+            padding: 2%;
+        }
+
+        .desc3{
+            width: 36%;
+            float: left;
+            padding: 2%;
+        }
+        .tvposter1{
+            width: 56%;
+            float: left;
+            padding: 2%;
+        }
+
+        .tvdesc1{
+            width: 36%;
+            float: left;
+            padding: 2%;
+        }
+        .tvposter2{
+            width: 56%;
+            float: left;
+            padding: 2%;
+        }
+
+        .tvdesc2{
+            width: 36%;
+            float: left;
+            padding: 2%;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #A68A64;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        th {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #582F0E;
+            background-color: #936639;
+            font-family: "Fjalla One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        td{
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #582F0E;
+            color: black;
+            font-family: "Abel", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Fantasy</h1>
+        </header>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Action.html">Action</a></li>
+                <li><a href="Sci-Fi.html">Sci-Fi</a></li>
+                <li><a href="Drama.html">Drama</a></li>
+              
+            </ul>
+        </nav>
+
+        <div id="main-content">
+                <div class="poster1">
+                    <figure>
+                    <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781608871131/harry-potter-poster-collection-9781608871131_hr.jpg"/>
+                    </figure>
+                </div>
+
+                <div class="desc1">
+                    <h2>Harry Potter</h2>
+                    <p>
+                        "Harry Potter" is a fantasy book series written by British author J.K. Rowling. The series follows the life and adventures of a young wizard, Harry Potter, and his friends 
+                        as they attend Hogwarts School of Witchcraft and Wizardry. The series consists of seven books, each corresponding to a year of Harry's education at Hogwarts. The series explores
+                         themes of friendship, courage, love, and the battle between good and evil. It became a global phenomenon, with adaptations into a successful film series, theme park attractions, 
+                         and a dedicated fan base worldwide.
+                    </p>
+    
+                </div> 
+           
+                <div class="poster2">
+                    <figure>
+                    <img src="https://img.posterstore.com/zoom/wb0176-8lordoftherings-theeyeofsauron50x70_colorcorrectedonlyforweb.jpg"/>
+                    </figure>
+                </div>
+
+                <div class="desc2">
+                    <h2>The Lord of the Rings</h2>
+                    <p>
+                        "The Lord of the Rings" is a high fantasy novel written by J.R.R. Tolkien. It is a trilogy consisting of three books: "The Fellowship of the Ring," "The Two Towers," and "
+                        The Return of the King." The story is set in the fictional world of Middle-earth and follows the quest to destroy the One Ring, a powerful and malevolent artifact created 
+                        by the Dark Lord Sauron.  The trilogy explores themes of friendship, courage, sacrifice, power, and the struggle between good and evil. Tolkien's rich world-building, 
+                        intricate languages, and diverse characters have made "The Lord of the Rings" one of the most celebrated and influential works of fantasy literature.
+                    </p>
+                </div>
+
+                <div class="poster3">
+                    <figure>
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjIwNTM0Mzc5MV5BMl5BanBnXkFtZTgwMDk5NDU1ODE@._V1_.jpg"/>
+                    </figure>
+                </div>
+
+                <div class="desc3">
+                    <h2>Warcraft</h2>
+                    <p>
+                        The "Warcraft" movie, titled "Warcraft: The Beginning," is a fantasy film released in 2016 and directed by Duncan Jones. It is based on the popular video game series "Warcraft" 
+                        developed by Blizzard Entertainment. The movie serves as an introduction to the Warcraft universe, exploring the conflict between the human kingdom of Azeroth and the orcish Horde.
+                        The movie portrays the clash of cultures, the struggles within each faction, and the quest for survival. As the war unfolds, both sides face moral dilemmas, and characters must 
+                        make choices that will shape the fate of their world.
+                    </p>
+                </div>
+        </div><!--Closing main div-->
+        <div id="sidebar">
+            <div class="tvposter1">
+                <figure>
+                    <img src="https://m.media-amazon.com/images/M/MV5BN2IzYzBiOTQtNGZmMi00NDI5LTgxMzMtN2EzZjA1NjhlOGMxXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg"/>
+                </figure>
+            </div>
+
+            <div class="tvdesc1">
+                <h2>Game of Thrones</h2>
+                <p>
+                    "Game of Thrones" is a television series based on the "A Song of Ice and Fire" novels by George R.R. Martin. Created by David Benioff and D.B. Weiss, the show aired from 2011 to 
+                    2019 and consists of eight seasons. "Game of Thrones" is known for its intricate plot, complex characters, political intrigue, and epic fantasy elements.  "Game of Thrones" received 
+                    widespread acclaim for its production values, storytelling, and performances. However, the final season garnered mixed reviews for its pacing and resolution of certain plotlines.
+                </p>
+            </div>
+
+            <div class="tvposter2">
+                <figure>
+                    <img src="https://m.media-amazon.com/images/I/61+ix81a5yL._AC_UF894,1000_QL80_.jpg"/>
+                </figure>
+            </div>
+
+            <div class="tvdesc2">
+                <h2>The Witcher</h2>
+                <p>
+                    The Witcher" is a television series based on the book series of the same name by Polish author Andrzej Sapkowski. Created by Lauren Schmidt Hissrich, the show premiered on Netflix 
+                    in December 2019. It is an epic fantasy series that follows the adventures of Geralt of Rivia, a monster hunter known as a Witcher.  "The Witcher" received both praise and criticism. 
+                    Viewers appreciated Henry Cavill's portrayal of Geralt, the fantasy world's rich visuals, and the complex characters. The second season of the series continued the story, introducing 
+                    new characters and expanding on the lore established in the first season.
+                </p>
+            </div>
+
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Release Year</th>
+                    <th>Director</th>
+                    <th>Main Cast</th>
+                    <th>IMDb Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Harry Potter</td>
+                    <td>2001</td>
+                    <td>Chris Columbus</td>
+                    <td>Daniel Radcliffe, Emma Watson</td>
+                    <td>7.6</td>
+                </tr>
+                <tr>
+                    <td>The Lord of the Rings</td>
+                    <td>2001</td>
+                    <td>Christopher Nolan</td>
+                    <td>Elijah Wood, Viggo Mortensen</td>
+                    <td>8.9</td>
+                </tr>
+                <tr>
+                    <td>Warcraft</td>
+                    <td>2016</td>
+                    <td>Duncan Jones</td>
+                    <td>Travis Fimmel, Paula Pattron</td>
+                    <td>6.7</td>
+                </tr>
+                <tr>
+                    <td>Game of Thrones</td>
+                    <td>2011</td>
+                    <td>Mark Mylod</td>
+                    <td>Emilia Clarke, Sophia Turner</td>
+                    <td>9.2</td>
+                </tr>
+                <tr>
+                    <td>The Witcher</td>
+                    <td>2019</td>
+                    <td>Marc Jobst</td>
+                    <td>Anya Chalotra, Henry Cavil</td>
+                    <td>8</td>
+                </tr>
+            </tbody>
+        </table>
+        <footer>
+            Made by Evan Brisbin
+        </footer>
+    </div>
+</body>
+
+
+
+
+
+</html>

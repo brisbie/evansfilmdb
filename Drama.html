@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+    <html lang="eng">
+ <head>
+    <meta charset="utf-8">
+    <title>Evan's Film Database</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Fjalla+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        #main-content{
+            width: 46%;
+            float: left;
+            padding: 2%;
+        }
+
+        #sidebar{
+            width: 44%;
+            float: left;
+            padding: 2%;
+        }
+
+        #wrapper{
+            width: 80%;
+            margin: 0% auto;
+        }
+
+        body{
+            background-color: #C2C5AA;
+        }
+
+        p{
+            margin: 3% 0;
+            color: #333D29;
+            font-family: "Abel", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+        }
+        h1{
+            margin: 2% 0;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 44px;
+            background-color: #656D4A;
+            padding: 2%;
+        }
+
+        h2{
+            margin: 2% 0;
+            font-family: "Fjalla One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 26px;
+        }
+
+        footer{
+            clear: left;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-left: 2%;
+        }
+
+        .navbar ul
+        {
+            list-style-type: none;
+            background-color: #A68A64;
+            padding: 1%;
+            margin: 0%;
+            overflow:hidden
+        }
+
+        .navbar a{
+            color: black;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            text-align: center;
+        }
+
+        .navbar a:hover{
+            background-color: #936639;
+        }
+
+        .navbar li {
+            float: left;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+        }
+        .poster1{
+            width: 56%;
+            float: left;
+            padding: 2%;
+        }
+        .desc1{
+            width: 36%;
+            float: left;
+            padding: 2%;
+        }
+
+        .poster2{
+            width: 56%;
+            float: left;
+            padding: 2%;
+        }
+
+        .desc2{
+            width: 36%;
+            float: left;
+            padding: 2%;
+        }
+        figure img{
+            width: 80%;
+            margin: 0;
+            border: 5px solid #414833;
+        }
+        .poster3{
+            width: 56%;
+            float: left;
+            padding: 2%;
+        }
+
+        .desc3{
+            width: 36%;
+            float: left;
+            padding: 2%;
+        }
+        .poster4{
+            width: 56%;
+            float: left;
+            padding: 2%;
+        }
+
+        .desc4{
+            width: 36%;
+            float: left;
+            padding: 2%;
+        }
+        .tvposter1{
+            width: 56%;
+            float: left;
+            padding: 2%;
+        }
+
+        .tvdesc1{
+            width: 36%;
+            float: left;
+            padding: 2%;
+        }
+        .tvposter2{
+            width: 56%;
+            float: left;
+            padding: 2%;
+        }
+
+        .tvdesc2{
+            width: 36%;
+            float: left;
+            padding: 2%;
+        }
+        .tvposter3{
+            width: 56%;
+            float: left;
+            padding: 2%;
+        }
+
+        .tvdesc3{
+            width: 36%;
+            float: left;
+            padding: 2%;
+        }
+        .tvposter4{
+            width: 56%;
+            float: left;
+            padding: 2%;
+        }
+
+        .tvdesc4{
+            width: 36%;
+            float: left;
+            padding: 2%;
+        }
+    
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #A68A64;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        th {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #582F0E;
+            background-color: #936639;
+            font-family: "Fjalla One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        td{
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #582F0E;
+            color: black;
+            font-family: "Abel", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Drama</h1>
+        </header>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Action.html">Action</a></li>
+                <li><a href="Sci-Fi.html">Sci-Fi</a></li>
+                <li><a href="Fantasy.html">Fantasy</a></li>
+              
+            </ul>
+        </nav>
+        
+            <div id="main-content">
+                    <div class="poster1">
+                        <figure>
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjE4ZTZlNDAtM2Q3YS00YjFhLThjN2UtODg2ZGNlN2E2MWU2XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"/>
+                        </figure>
+                    </div>
+
+                    <div class="desc1">
+                        <h2>Killers of the Flower Moon</h2>
+                        <p>
+                            "Killers of the Flower Moon" refers to both a non-fiction book and an upcoming film adaptation. The book, written by David Grann, explores a series of murders of wealthy 
+                            Osage Native Americans in Oklahoma during the 1920s. The film adaptation, directed by Martin Scorsese, is based on Grann's book and is set to be released in the future.
+                            The story not only sheds light on a dark chapter in American history but also examines the challenges faced by marginalized communities in protecting their resources and rights. 
+                            "Killers of the Flower Moon" is both a historical true crime narrative and a reflection on the birth of the FBI as a response to such crimes.
+                        </p>
+        
+                    </div> 
+           
+                <div class="poster2">
+                    <figure>
+                    <img src="https://i.ebayimg.com/images/g/agkAAOSw4shX-u5A/s-l1200.webp"/>
+                    </figure>
+                </div>
+
+                <div class="desc2">
+                    <h2>Whiplash</h2>
+                    <p>
+                        "Whiplash" is a 2014 American drama film written and directed by Damien Chazelle. The film revolves around the intense relationship between a young and ambitious jazz drummer 
+                        and his demanding music instructor at a prestigious music conservatory. .K. Simmons received widespread acclaim for his role as Terence Fletcher, earning him the Academy Award 
+                        for Best Supporting Actor. "Whiplash" was praised for its intense storytelling, strong performances, and the examination of the psychological toll of pursuing artistic greatness.
+                    </p>
+                </div>
+
+                <div class="poster3">
+                    <figure>
+                        <img src="https://i.ebayimg.com/images/g/mDsAAOSwp-1i4wj9/s-l1200.webp"/>
+                    </figure>
+                </div>
+
+                <div class="desc3">
+                    <h2>Minari</h2>
+                    <p>
+                        "Minari" is a 2020 American drama film written and directed by Lee Isaac Chung. The film tells the story of a Korean-American family that moves to a farm in rural Arkansas in the 1980s,
+                        pursuing the American Dream. "Minari" explores themes of family, identity, and the pursuit of a better life.  "Minari" received critical acclaim for its authentic storytelling, powerful 
+                        performances, and its portrayal of the immigrant experience. The film was nominated for multiple awards, including six Academy Award nominations
+                    </p>
+                </div>
+
+                <div class="poster4">
+                    <figure>
+                        <img src="https://m.media-amazon.com/images/I/71JBbULtGSL._AC_UF894,1000_QL80_.jpg"/>
+                    </figure>
+                </div>
+
+                <div class="desc4">
+                    <h2>Good Will Hunting</h2>
+                    <p>
+                        "Good Will Hunting" is a 1997 American drama film directed by Gus Van Sant and written by Matt Damon and Ben Affleck. The film stars Matt Damon as the titular character, Will Hunting,
+                        a young janitor at the Massachusetts Institute of Technology (MIT) who possesses an extraordinary talent for mathematics.  "Good Will Hunting" received critical acclaim for its powerful
+                        performances, particularly by Matt Damon and Robin Williams. The film won two Academy Awards: Best Supporting Actor for Robin Williams and Best Original Screenplay for Matt Damon and Ben Affleck. 
+                        The heartfelt exploration of personal growth, redemption, and human connection contributed to the film's enduring popularity.
+                    </p>
+                </div>
+        </div><!--Closing main div-->
+        <div id="sidebar">
+            <div class="tvposter1">
+                <figure>
+                    <img src="https://i5.walmartimages.com/asr/83fb5527-feb5-4e49-81a8-db275f1e891c.63721a15d3c122255865178504861cd7.jpeg"/>
+                </figure>
+            </div>
+
+            <div class="tvdesc1">
+                <h2>Breaking Bad</h2>
+                <p>
+                    "Breaking Bad" follows the transformation of Walter White (played by Bryan Cranston), a high school chemistry teacher in Albuquerque, New Mexico, who turns to cooking and selling 
+                    methamphetamine after being diagnosed with terminal lung cancer. He partners with his former student, Jesse Pinkman (played by Aaron Paul), to enter the drug trade.  The show is 
+                    known for its intense character development, moral ambiguity, and exploration of the consequences of one's actions. "Breaking Bad" is often considered one of the greatest television 
+                    series of all time.
+                </p>
+            </div>
+
+            <div class="tvposter2">
+                <figure>
+                    <img src="https://i.pinimg.com/originals/30/d9/a3/30d9a3d68b17faf98ce9a9046b19743c.jpg"/>
+                </figure>
+            </div>
+
+            <div class="tvdesc2">
+                <h2>Peaky Blinders</h2>
+                <p>
+                    "Peaky Blinders" is a British crime drama television series created by Steven Knight. The show premiered in 2013 and has gained widespread acclaim for its gripping storytelling,
+                    strong character development, and stylish period setting.  "Peaky Blinders" has been praised for its intricate plot, strong performances, and atmospheric period setting. 
+                    The show has gained a dedicated fan base and continues to be well-received for its complex characters and storytelling.
+                </p>
+            </div>
+
+            <div class="tvposter3">
+                <figure>
+                    <img src="https://i.ebayimg.com/images/g/wsUAAOSw3o9jmCSN/s-l1600.jpg"/>
+                </figure>
+            </div>
+
+            <div class="tvdesc3">
+                <h2>The Last of Us</h2>
+                <p>
+                    "The Last of Us" is set in a post-apocalyptic world where a fungal infection has turned much of the human population into violent creatures known as Clickers. 
+                    The story follows Joel, a hardened survivor, and Ellie, a young girl with a mysterious immunity to the infection. Joel is tasked with escorting Ellie across 
+                    the United States in the hopes of finding a group known as the Fireflies, who may hold the key to developing a cure.
+                </p>
+            </div>
+
+            <div class="tvposter4">
+                <figure>
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/753690118590559.608bfd3ecffc9.png"/>
+                </figure>
+            </div>
+
+            <div class="tvdesc4">
+                <h2>Normal People</h2>
+                <p>
+                    "Normal People" is a television series based on the novel of the same name by Irish author Sally Rooney. The series was released in 2020 and received critical
+                    acclaim for its nuanced portrayal of relationships and its exploration of the complexities of human connection.  "Normal People" is praised for its realistic 
+                    and sensitive portrayal of human relationships, as well as the strong performances of its lead actors. The adaptation remains faithful to Sally Rooney's novel, 
+                    capturing the essence of the source material's exploration of love, connection, and the challenges of coming of age.
+                </p>
+            </div>
+
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Release Year</th>
+                    <th>Director</th>
+                    <th>Main Cast</th>
+                    <th>IMDb Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Killers of the Moon</td>
+                    <td>2023</td>
+                    <td>Martin Scorsese</td>
+                    <td>Leonardo DiCaprio, Lily Gladstone</td>
+                    <td>7.7</td>
+                </tr>
+                <tr>
+                    <td>Whiplash</td>
+                    <td>2014</td>
+                    <td>Damien Chazelle</td>
+                    <td>Miles Teller, J.K. Simmons</td>
+                    <td>8.5</td>
+                </tr>
+                <tr>
+                    <td>Minari</td>
+                    <td>2020</td>
+                    <td>Lee Isaac Chung</td>
+                    <td>Steven Yeun, Han Ye-ri</td>
+                    <td>7.4</td>
+                </tr>
+                <tr>
+                    <td>Good Will Hunting</td>
+                    <td>1997</td>
+                    <td>Gus Van Sant</td>
+                    <td>Matt Damon, Robin Williams</td>
+                    <td>8.3</td>
+                </tr>
+                <tr>
+                    <td>Breaking Bad</td>
+                    <td>2008</td>
+                    <td>Vince Gilligan</td>
+                    <td>Bryan Cranston, Aaron Paul</td>
+                    <td>9.5</td>
+                </tr>
+                <tr>
+                    <td>Peaky Blinders</td>
+                    <td>2013</td>
+                    <td>Otto Bathurst</td>
+                    <td>Cillian Murphy, Paul Anderson</td>
+                    <td>8.8</td>
+                </tr>
+                <tr>
+                    <td>The Last of Us</td>
+                    <td>2023</td>
+                    <td>Peter Hoar</td>
+                    <td>Pedro Pascal, Bella Ramsey</td>
+                    <td>8.8</td>
+                </tr>
+                <tr>
+                    <td>Normal People</td>
+                    <td>2020</td>
+                    <td>Lenny Abrahamson</td>
+                    <td>Paul Mescal, Daisy Edgar-Jones</td>
+                    <td>8.4</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <footer>
+            Made by Evan Brisbin
+        </footer>
+    </div>
+</body>
+
+
+
+
+
+</html>
